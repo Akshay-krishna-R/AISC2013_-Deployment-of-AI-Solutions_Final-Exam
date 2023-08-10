@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification App</title>
+</head>
+<body>
+    <h1>Classification App</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" id="file_name" name="file">
+        <input type="submit" value="Upload & Analyze">
+    </form>
+    
+    {% if prediction != '' %}
+    <h2>Results:</h2>
+
+    <h3>Predictions:</h3>
+    <ul>
+        <li>{{ prediction }}</li>
+
+    </ul>
+    {% endif %}
+</body>
+</html>
